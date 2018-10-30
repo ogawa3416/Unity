@@ -53,8 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BackgroundController.cs" />
      <Compile Include="Assets\BulletController.cs" />
+     <Compile Include="Assets\RockController.cs" />
      <Compile Include="Assets\RocketController.cs" />
+     <Compile Include="Assets\RockGenerator.cs" />
+     <Compile Include="Assets\Scripts\IObserver.cs" />
+     <Compile Include="Assets\Scripts\SushiLaneSubject.cs" />
+     <Compile Include="Assets\Scripts\test.cs" />
+     <Compile Include="Assets\UIController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Kohei Ogawa/Documents/Unity/SampleShooting/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
@@ -298,6 +305,14 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{30BF6B6C-480C-626E-2A6C-AC8845443E75}</Project>      <Name>UniRx</Name>    </ProjectReference>
+    <ProjectReference Include="UniRx.Async.csproj">
+      <Project>{7F968D8A-6E4C-A84E-34D6-194E48CBF78D}</Project>      <Name>UniRx.Async</Name>    </ProjectReference>
+    <ProjectReference Include="UniRx.Async.Editor.csproj">
+      <Project>{82067642-D39E-F940-844C-157C7E5A3AA1}</Project>      <Name>UniRx.Async.Editor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

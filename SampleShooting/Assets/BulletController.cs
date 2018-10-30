@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,4 +18,14 @@ public class BulletController : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        // 衝突したときにスコアを更新する
+        GameObject.Find("Canvas").GetComponent<UIController>().AddScore();
+
+        Destroy(coll.gameObject);
+        Destroy(gameObject);
+    }
+
 }

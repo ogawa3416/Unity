@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50525646280053686}
   - component: {fileID: 114803304653833312}
   - component: {fileID: 114678059878828734}
-  - component: {fileID: 61509940989292784}
+  - component: {fileID: 61850045420918570}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61509940989292784
+--- !u!61 &61850045420918570
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 1
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.06}
   m_EdgeRadius: 0

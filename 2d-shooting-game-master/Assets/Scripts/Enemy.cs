@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
         spaceship = GetComponent<Spaceship>();
 
         // ローカル座標のY軸のマイナス方向に移動する
-        spaceship.Move(transform.up * -1);
+        Move(transform.up * -1);
 
         // canShotがfalseの場合、ここでコルーチンを終了させる
         if (spaceship.canShot == false)
@@ -40,13 +40,19 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // 機体の移動
+    public void Move(Vector2 direction)
+    {
+        GetComponent<Rigidbody2D>().velocity = direction * spaceship.speed;
+    }
+
     void OnTriggerEnter2D(Collider2D c)
     {
         // レイヤー名を取得
         string layerName = LayerMask.LayerToName(c.gameObject.layer);
 
         // レイヤー名がBullet (Player)以外の時は何も行わない
-        if (layerName != "Bullet(Player)") return;
+        if (layerName != "Bullet (Player)") return;
 
         // 弾の削除
         Destroy(c.gameObject);

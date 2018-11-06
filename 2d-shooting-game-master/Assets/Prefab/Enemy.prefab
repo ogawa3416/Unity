@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2a742a7d8f2e94bb48856e3ad20f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.4
   shotDelay: 0.3
   bullet: {fileID: 1500344734799928, guid: f82c674507ddf9547b5b2df7178cdc56, type: 2}
   canShot: 1
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae159b25d04cf54a9c1e4f004813126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 1
 --- !u!212 &212335438265823342
 SpriteRenderer:
   m_ObjectHideFlags: 1

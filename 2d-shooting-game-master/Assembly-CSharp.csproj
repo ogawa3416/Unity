@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Explosion.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Spaceship.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Kohei Ogawa/Documents/Unity/2d-shooting-game-master/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

@@ -645,7 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae159b25d04cf54a9c1e4f004813126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 4
+  point: 100
 --- !u!114 &114583952673045996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,7 +674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae159b25d04cf54a9c1e4f004813126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 8
+  point: 200
 --- !u!114 &114677775756493374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -701,7 +703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae159b25d04cf54a9c1e4f004813126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 12
+  point: 300
 --- !u!212 &212298575916417596
 SpriteRenderer:
   m_ObjectHideFlags: 1

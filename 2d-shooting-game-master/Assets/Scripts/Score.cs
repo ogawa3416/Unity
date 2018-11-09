@@ -23,6 +23,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         Initialize();
+        Debug.Log("テスト");
     }
 
     void Update()
@@ -35,7 +36,7 @@ public class Score : MonoBehaviour
 
         // スコア・ハイスコアを表示する
         scoreText.text = score.ToString();
-        highScoreText.text = "HighScore : " + highScore.ToString();
+        highScoreText.text = "HighScore: " + highScore.ToString();
     }
 
     // ゲーム開始前の状態に戻す

@@ -23,7 +23,6 @@ public class Score : MonoBehaviour
     void Start()
     {
         Initialize();
-        Debug.Log("テスト");
     }
 
     void Update()

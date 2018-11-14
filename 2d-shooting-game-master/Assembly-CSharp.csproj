@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Emitter.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\Manager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\SceneLoadScript.cs" />

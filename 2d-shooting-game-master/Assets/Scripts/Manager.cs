@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
 
 public class Manager : MonoBehaviour
 {
@@ -7,6 +10,10 @@ public class Manager : MonoBehaviour
 
     // タイトル
     private GameObject title;
+
+    // ゲームオーバー時のテキスト
+    public GameObject GameOverText1;
+
 
     void Start ()
     {
@@ -19,6 +26,7 @@ public class Manager : MonoBehaviour
         // ゲーム中ではなく、Xキーが押されたらtrueを返す。
         if (IsPlaying () == false && Input.GetKeyDown (KeyCode.X)) {
             GameStart ();
+            GameOverText1.GetComponent<Text>().enabled = false;
         }
     }
 
@@ -33,6 +41,7 @@ public class Manager : MonoBehaviour
     {
         // ゲームオーバー時に、タイトルを表示する
         title.SetActive (true);
+        GameOverText1.SendMessage("Lose");
     }
 
     public bool IsPlaying ()
@@ -40,4 +49,5 @@ public class Manager : MonoBehaviour
         // ゲーム中かどうかはタイトルの表示/非表示で判断する
         return title.activeSelf == false;
     }
+
 }

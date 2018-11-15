@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
 
     // ゲームオーバー時のテキスト
     public GameObject GameOverText1;
+    public GameObject GameOverText2;
 
 
     void Start ()
@@ -25,8 +26,12 @@ public class Manager : MonoBehaviour
     {
         // ゲーム中ではなく、Xキーが押されたらtrueを返す。
         if (IsPlaying () == false && Input.GetKeyDown (KeyCode.X)) {
-            GameStart ();
-            GameOverText1.GetComponent<Text>().enabled = false;
+            if (GameOverText1.GetComponent<Text>().enabled == enabled)
+            {
+                SceneManager.LoadScene("Title");
+            }
+            else
+                GameStart();
         }
     }
 
@@ -34,6 +39,7 @@ public class Manager : MonoBehaviour
     {
         // ゲームスタート時に、タイトルを非表示にしてプレイヤーを作成する
         title.SetActive (false);
+        GameOverText2.gameObject.GetComponent<Text>().enabled = false;
         Instantiate (player, player.transform.position, player.transform.rotation);
     }
 
@@ -42,6 +48,7 @@ public class Manager : MonoBehaviour
         // ゲームオーバー時に、タイトルを表示する
         title.SetActive (true);
         GameOverText1.SendMessage("Lose");
+        GameOverText2.SendMessage("Lose");
     }
 
     public bool IsPlaying ()

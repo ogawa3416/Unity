@@ -24,14 +24,28 @@ public class Manager : MonoBehaviour
 
     void Update ()
     {
-        // ゲーム中ではなく、Xキーが押されたらtrueを返す。
-        if (IsPlaying () == false && Input.GetKeyDown (KeyCode.X)) {
-            if (GameOverText1.GetComponent<Text>().enabled == enabled)
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+
+            // タッチ情報を取得する
+            Touch touch = Input.GetTouch(i);
+
+            // ゲーム中ではなく、タッチ直後であればtrueを返す。
+            if (IsPlaying() == false && touch.phase == TouchPhase.Began)
             {
-                SceneManager.LoadScene("Title");
+                if (GameOverText1.GetComponent<Text>().enabled == enabled)
+                {
+                    SceneManager.LoadScene("Title");
+                }
+                else
+                    GameStart();
             }
-            else
+
+            // ゲーム中ではなく、マウスクリックされたらtrueを返す。
+            if (IsPlaying() == false && Input.GetMouseButtonDown(0))
+            {
                 GameStart();
+            }
         }
     }
 

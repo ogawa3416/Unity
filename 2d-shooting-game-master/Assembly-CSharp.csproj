@@ -74,10 +74,12 @@
     <Compile Include="Assets\Scripts\SceneLoadScript.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Spaceship.cs" />
-    <Compile Include="Assets\SimpleTouchController\Scripts\InfoTouches.cs" />
-    <Compile Include="Assets\SimpleTouchController\Scripts\PlayerMoveController.cs" />
-    <Compile Include="Assets\SimpleTouchController\Scripts\SimpleTouchController.cs" />
-    <None Include="Assets\SimpleTouchController\README.txt" />
+    <Compile Include="Assets\Virtual Joystick Pack\Examples\2D Example\Player2DExample.cs" />
+    <Compile Include="Assets\Virtual Joystick Pack\Examples\3D Example\Player3DExample.cs" />
+    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Virtual Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Kohei Ogawa/Documents/Unity/2d-shooting-game-master/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -318,6 +320,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A13273F2-53D5-CABF-D180-AC1B2BE4C87F}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

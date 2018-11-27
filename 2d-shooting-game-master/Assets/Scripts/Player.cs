@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Player : MonoBehaviour
 
     // Backgroundコンポーネント
     Background background;
+
+    public float moveSpeed = 8f;
+    public Joystick joystick;
 
     IEnumerator Start()
     {
@@ -31,21 +35,22 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(spaceship.shotDelay);
         }
     }
-
+ 
     void Update()
     {
-        // 右・左
-        float x = Input.GetAxisRaw("Horizontal");
+       // 右・左
+       float x = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
         // 上・下
-        float y = Input.GetAxisRaw("Vertical");
+       float y = CrossPlatformInputManager.GetAxisRaw("Vertical");
 
         // 移動する向きを求める
-        Vector2 direction = new Vector2(x, y).normalized;
+        //Vector2 direction = new Vector2(x, y).normalized;
+        Vector2 direction = new Vector2(x, y);
 
         // 移動の制限
         Move(direction);
-
+        
     }
 
     // 機体の移動
